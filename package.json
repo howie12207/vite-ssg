@@ -14,7 +14,7 @@
         "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
         "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix && npm run lint:style -- --fix",
         "build:server": "vite build --ssr src/prerender/entry-server.js --outDir dist/server",
-        "generate": "vite build --ssrManifest --outDir dist/static && npm run build:server && node ./src/prerender/prerender"
+        "generate": "node ./src/prerender/cleanDist && vite build --ssrManifest --outDir dist && npm run build:server && node ./src/prerender/prerender"
     },
     "lint-staged": {
         "*.{js,vue}": "eslint",

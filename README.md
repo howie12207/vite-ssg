@@ -11,7 +11,7 @@ git clone 'url'
 2. Install
 
 ```
-npm i react-snap
+npm i
 ```
 
 3. Run
@@ -60,7 +60,7 @@ npm run generate
 
 8. Copy files
 
-copy files in 'dist/static'
+copy files in 'dist'
 
 ## Notice (Bug)
 
