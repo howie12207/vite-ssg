@@ -214,6 +214,34 @@ import 'aos/dist/aos.css';
 
 ```
 
+### How to use vue-scroll-to
+
+1. Import in your components
+
+```
+// xxx.vue
+
+<script setup>
+import VueScrollTo from 'vue-scrollto';
+
+const scrollTo = target => {
+    VueScrollTo.scrollTo(target);
+};
+</script>
+
+```
+
+2. Use it in your template
+
+```
+// xxx.vue
+
+<template>
+    <h1 class="h-screen" @click="scrollTo('#test')">home1</h1>
+    <h1 class="h-screen" id="test">home2</h1>
+</template>
+```
+
 ## Other recommend plugins
 
 | Name              | Description         |
