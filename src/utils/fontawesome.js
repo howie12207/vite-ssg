@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import { faCaretUp, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCaretUp);
+library.add(faCaretUp, faChevronUp);
 
 export default FontAwesomeIcon;
