@@ -87,6 +87,7 @@ copy files in 'dist'
 | [stylelint]          | Check CSS                     |
 | [commitlint] [husky] | Check Commit                  |
 | [react-snap]         | Pre-render tool               |
+| [aos]                | Animate on scroll             |
 
 [tailwind]: https://github.com/tailwindlabs/tailwindcss
 [element-plus]: https://github.com/element-plus/element-plus
@@ -97,10 +98,11 @@ copy files in 'dist'
 [commitlint]: https://github.com/conventional-changelog/commitlint
 [husky]: https://github.com/typicode/husky
 [react-snap]: https://github.com/stereobooster/react-snap
+[aos]: https://github.com/michalsnik/aos
 
 ### How to use fontawesome
 
-1.Add corresponse icon
+1. Add corresponse icon
 
 ```
 // utils/fontawesome.js
@@ -114,7 +116,7 @@ library.add(faCaretUp); // <-- Add correspond icon here
 export default FontAwesomeIcon;
 ```
 
-2.Check you have import fontawesome and use it
+2. Check you have import fontawesome and use it
 
 ```
 // src/main.js
@@ -123,7 +125,7 @@ import fontAwesomeIcon from '@/utils/fontawesome.js';
 app.component('FAIcon', fontAwesomeIcon)
 ```
 
-3.Use in your vue file
+3. Use in your vue file
 
 ```
 // XXX.vue
@@ -133,7 +135,7 @@ app.component('FAIcon', fontAwesomeIcon)
 
 ### How to use vue-meta
 
-1.Check you have import vue-meta and use it
+1. Check you have import vue-meta and use it
 
 ```
 // src/main.js
@@ -142,7 +144,7 @@ import { createMetaManager } from 'vue-meta';
 app.use(createMetaManager())
 ```
 
-2.Import in your main page
+2. Import in your main page
 
 ```
 // src/App.vue
@@ -170,7 +172,7 @@ useMeta({
 </template>
 ```
 
-3.Use in your pages
+3. Use in your pages
 
 ```
 // src/views/xxx.vue
@@ -181,6 +183,33 @@ import { useMeta } from 'vue-meta';
 useMeta({
     title: 'Home'  // <-- In this page title will be "Home | Vite Template"
 });
+</script>
+
+```
+
+### How to use aos
+
+1. Check you have import aos
+
+```
+// src/main.js
+
+import 'aos/dist/aos.css';
+
+```
+
+2. Import in your main page
+
+```
+// src/xxx.vue
+
+<script setup>
+// import { onMounted } from 'vue';
+// import AOS from 'aos';
+
+// onMounted(() => {
+//     AOS.init();
+// });
 </script>
 
 ```

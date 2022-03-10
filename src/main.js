@@ -8,6 +8,7 @@ import 'element-plus/dist/index.css';
 
 import '@/style/tailwind.css';
 import '@/style/global.scss';
+import 'aos/dist/aos.css';
 
 import fontAwesomeIcon from '@/utils/fontawesome.js';
 
