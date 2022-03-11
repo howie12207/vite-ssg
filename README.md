@@ -66,6 +66,8 @@ copy files in 'dist'
 
 ### Can't use vue-meta to control meta
 
+### Can't use Swiper 7, because it use es module, can't be resolve by server side
+
 ## Composition
 
 -   Vite
