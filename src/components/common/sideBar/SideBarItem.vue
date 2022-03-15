@@ -48,6 +48,7 @@ const clickLink = (link, e) => {
 .side_bar_item {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     text-align: center;
     font-size: 16px;
