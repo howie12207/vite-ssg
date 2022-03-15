@@ -5,11 +5,12 @@ import IconMenu from '@c/common/icon/IconMenu.vue';
 const emits = defineEmits(['clickLink']);
 const props = defineProps({
     navList: {
-        type: Array,
-        default: () => [
-            { text: '認識國民理財機器人', link: '', isActive: true },
-            { text: '常見問題', link: 'https://google.com.tw' }
-        ]
+        type: [Boolean, Array],
+        default: false
+        // () => [
+        //     { text: '認識國民理財機器人', link: '', isActive: true },
+        //     { text: '常見問題', link: 'https://google.com.tw' }
+        // ]
     }
 });
 
@@ -42,7 +43,12 @@ const clickLink = (index, link, e) => {
                     </li>
                 </ul>
             </nav>
-            <IconMenu v-model:status="isOpenMenu" class="icon_menu" main-color="#005598" />
+            <IconMenu
+                v-if="navList"
+                v-model:status="isOpenMenu"
+                class="icon_menu"
+                main-color="#005598"
+            />
         </div>
     </header>
 </template>

@@ -24,6 +24,7 @@ const clickLink = (index, link, e) => {
             :style="{ backgroundColor: item.color }"
             :class="['side_bar_item', { two_items: props.list.length > 1 }]"
             :href="item.link"
+            target="_blank"
             @click="clickLink(index, item.link, $event)"
             >{{ item.text }}
         </a>
@@ -45,6 +46,7 @@ const clickLink = (index, link, e) => {
     z-index: 999;
     display: flex;
     width: 90%;
+    height: min-content;
     margin: 0 auto;
     @include size-md {
         flex-direction: column;

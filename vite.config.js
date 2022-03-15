@@ -3,7 +3,8 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
 export default ({ mode }) => {
-    process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+    const env = process.env.ENVIRONMENT || mode;
+    process.env = { ...process.env, ...loadEnv(env, process.cwd()) };
 
     return defineConfig({
         plugins: [vue()],
