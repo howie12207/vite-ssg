@@ -1,8 +1,14 @@
 <script setup>
-import { useStore } from 'vuex';
-import PageLoading from '@c/common/pageLoading/PageLoading.vue';
+// import { useStore } from 'vuex';
+import { version } from '../package.json';
 
-const store = useStore();
+// import PageLoading from '@c/common/pageLoading/PageLoading.vue';
+
+// const store = useStore();
+
+const ENVIRONMENT = import.meta.env.VITE_ENV || import.meta.env.MODE;
+// eslint-disable-next-line no-console
+console.warn(`${ENVIRONMENT} version: ${version}`);
 </script>
 
 <template>
@@ -11,7 +17,7 @@ const store = useStore();
             <component :is="Component" />
         </transition>
     </router-view>
-    <transition name="fade">
-        <PageLoading v-if="store.state.pageLoading" />
-    </transition>
+    <!-- <transition name="fade">
+        <PageLoading v-show="store.state.pageLoading" />
+    </transition> -->
 </template>
