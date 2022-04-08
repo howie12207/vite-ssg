@@ -1,4 +1,4 @@
-import { createApp } from '../mainServer';
+import { createApp } from '../main';
 
 const { app, router } = createApp();
 

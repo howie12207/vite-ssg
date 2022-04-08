@@ -25,9 +25,10 @@ const routesToPrerender = fs.readdirSync(toAbsolute('../views')).map(file => {
             .replace('<!--preload-links-->', preloadLinks)
             .replace('<!--app-html-->', appHtml);
 
-        const filePath = `../../dist${url === '/' ? '/index' : url}.html`;
-        fs.writeFileSync(toAbsolute(filePath), html);
-        // console.log('pre-rendered:', filePath);
+        const filePath = url === '/' ? '../../dist/' : `../../dist${url}`;
+        if (url !== '/') fs.mkdirSync(toAbsolute(filePath));
+
+        fs.writeFileSync(toAbsolute(`${filePath}/index.html`), html);
     }
 
     // done, delete ssr manifest
