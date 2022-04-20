@@ -53,6 +53,7 @@
         "lint-staged": "^11.1.2",
         "postcss": "^8.3.6",
         "prettier": "2.4.0",
+        "prettier-plugin-tailwindcss": "^0.1.9",
         "sass": "^1.39.2",
         "stylelint": "^14.2.0",
         "stylelint-config-prettier": "^9.0.3",
